@@ -1,0 +1,18 @@
+{
+  "title": "Terminator",
+  "file": "/home/son/Vídeos/Terminator *1984*.mkv",
+  "start": "027",
+  "final": "6433",
+  "total": "6433.386000",
+  "age": "1984",
+  "desc": "",
+  "director": "James Cameron",
+  "genres": [
+    { "code": "", "name": "" }
+  ],
+  "volume": "100",
+  "wide": "16:9",
+  "censored": "",
+  "extra": "",
+  "size": "4406880"
+}
