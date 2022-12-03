@@ -14,3 +14,21 @@
 10. Deadpool (2016)
 11. Deadpool 2 (2018)
 12. Logan (2017)
+
+
+## _Maratón Predator/Alien orden cronológico_
+
+
+1. Predator: La Presa
+2. Depredador
+3. Depredador 2
+4. Alien vs Predator
+5. Alien vs Predator 2
+6. Predator
+7. Predators
+8. Prometheus
+9. Alien: Covenant
+10. Alien: El Octavo Pasajero
+11. Aliens: El regreso
+12. Alien 3
+13. Alien: Resurrection
