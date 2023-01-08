@@ -1,92 +1,329 @@
 <!DOCTYPE html>
 <html>
-  <style>body{background-color:black}footer{padding:10px 0;text-align:center}footer a{color:#70726f;font-size:20px;padding:10px;transition:.5s}footer a:hover{color:#fff}</style>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" sizes="16x16" href=" data:image/png;base64,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LyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6YjQ2Y2FmYTEtNGM2Ny00Y2VjLWFhNDQtNTY1M2EzNWNiZTlkIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJkZTM3YzMxLWQyNzgtNDNkYi1hMTkwLTM4MzlkZWI5OTc1MiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjk2N2EwZTY5LTI2OTQtNGYxOC1hMTBjLTgzNTQwYWIzODg5OSIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY2MDMyNTM5NjU5NTI1MSIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjMwIgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQzMWNkYjk4LTFkM2UtNDJlZi1hMzA2LTJhZWUzYjRkNGFjOCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDgtMTJUMTk6Mjk6NTYrMDI6MDAiLz4KICAgIDwvcmRmOlNlcT4KICAgPC94bXBNTTpIaXN0b3J5PgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+lKLiAAAAAvdQTFRFAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKg4cYAAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH5ggMER04vOW7gwAAAEdJREFUOMtjYBgEgIkAIEsByFgghhiPRwETTgUkumGQhgPZChgIKsDqYlQFDATcgE0FSQoIWQGNf7TwZUBNBngVDFxcDAIAAFdcBSPUga7xAAAAAElFTkSuQmCC" />
-  <title>Pelis Random 24/7 - FrangaL</title>
-  <script>
-  function newSite() {
-    var sites = ['https://player.twitch.tv/?channel=meresbalatv&parent=frangal.xyz',
-                 'https://player.twitch.tv/?channel=yonkisdelhd&parent=frangal.xyz',
-                 'https://ok.ru/videoembed/4525450141203?autoplay=1',
-                 'https://player.twitch.tv/?channel=teleclasicos&parent=frangal.xyz']
-    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+<style>
+  body {
+    background-color: black
   }
-  </script>
 
-  <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.0081%;" >
-    <iframe id="myIframe" src="https://player.twitch.tv/?channel=meresbalatv&parent=frangal.xyz" allow="autoplay" ; style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-  </div>
-  <input type="button" value="Cambiar canal" onClick="newSite()" />
+  footer {
+    padding: 10px 0;
+    text-align: center
+  }
 
+  footer a {
+    color: #70726f;
+    font-size: 20px;
+    padding: 10px;
+    transition: .5s
+  }
 
-  <style>
-  input { float: right; font-weight: 700; font-size: 12px;}
-  #chat,#chat:after,.chatbox{transition:all .4s ease-in-out}
-  #chat,#close-chat,.minim-button,.maxi-button,.chat-text{font-weight:700;cursor:pointer;font-family:Arial,sans-serif;text-align:center;height:20px;line-height:20px}
-  #chat,#close-chat,.chatbox{border:1px solid #A8A8A8}
-  #chat:after,#chat:before{position:absolute;border-style:solid;content:""}
-  .chatbox{position:fixed;bottom:0;left:50px;margin:0 0 -1500px;background:#fff;border-bottom:none;padding:28px 10px 10px;z-index:100000}
-  #close-chat{position:absolute;top:2px;right:2px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe;z-index:2}
-  #minim-chat,#maxi-chat{position:absolute;top:0;left:0;width:100%;height:20px;line-height:20px;cursor:pointer;z-index:1}
-  .minim-button{position:absolute;top:2px;right:26px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe}
-  .maxi-button{position:absolute;top:2px;right:26px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe;}
-  .chat-text{position:absolute;top:5px;left:10px;font-size:16px;}
-  #chat{width:40px;border-radius:3px;padding:2px 8px;font-size:12px;background:#fff;-webkit-transform:translateZ(0);transform:translateZ(0); float: left;}
-  #chat:before{border-width:10px 11px 0 0;border-color:#A8A8A8 transparent transparent;left:7px;bottom:-10px}
-  #chat:after{border-width:9px 8px 0 0;border-color:#fff transparent transparent;left:8px;bottom:-8px}
-  #chat:hover{background:#ddd;-webkit-animation-name:hvr-pulse-grow;animation-name:hvr-pulse-grow;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-direction:alternate}
-  #chat:hover:after{border-color:#ddd transparent transparent!important}
-  .animated-chat{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}
-  @-webkit-keyframes tada{0%{-webkit-transform:scale(1)}
-  10%,20%{-webkit-transform:scale(.9)rotate(-3deg)}
-  30%,50%,70%,90%{-webkit-transform:scale(1.1)rotate(3deg)}
-  40%,60%,80%{-webkit-transform:scale(1.1)rotate(-3deg)}
-  100%{-webkit-transform:scale(1)rotate(0)}
+  footer a:hover {
+    color: #fff
   }
-  @keyframes tada{0%{transform:scale(1)}
-  10%,20%{transform:scale(.9)rotate(-3deg)}
-  30%,50%,70%,90%{transform:scale(1.1)rotate(3deg)}
-  40%,60%,80%{transform:scale(1.1)rotate(-3deg)}
-  100%{transform:scale(1)rotate(0)}
-  }
-  .tada{-webkit-animation-name:tada;animation-name:tada}
-  @-webkit-keyframes hvr-pulse-grow{to{-webkit-transform:scale(1.1);transform:scale(1.1)}
-  }
-  @keyframes hvr-pulse-grow{to{-webkit-transform:scale(1.1);transform:scale(1.1)}
-  }
-  </style>
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="icon" type="image/png" sizes="16x16"
+  href=" data:image/png;base64,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LyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6YjQ2Y2FmYTEtNGM2Ny00Y2VjLWFhNDQtNTY1M2EzNWNiZTlkIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJkZTM3YzMxLWQyNzgtNDNkYi1hMTkwLTM4MzlkZWI5OTc1MiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjk2N2EwZTY5LTI2OTQtNGYxOC1hMTBjLTgzNTQwYWIzODg5OSIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY2MDMyNTM5NjU5NTI1MSIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjMwIgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQzMWNkYjk4LTFkM2UtNDJlZi1hMzA2LTJhZWUzYjRkNGFjOCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDgtMTJUMTk6Mjk6NTYrMDI6MDAiLz4KICAgIDwvcmRmOlNlcT4KICAgPC94bXBNTTpIaXN0b3J5PgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+lKLiAAAAAvdQTFRFAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKg4cYAAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH5ggMER04vOW7gwAAAEdJREFUOMtjYBgEgIkAIEsByFgghhiPRwETTgUkumGQhgPZChgIKsDqYlQFDATcgE0FSQoIWQGNf7TwZUBNBngVDFxcDAIAAFdcBSPUga7xAAAAAElFTkSuQmCC" />
+<title>Pelis Random 24/7 - FrangaL</title>
+<script>
+  Array.prototype.forEach.call(document.querySelectorAll('[data-url]'), elem => {
+    elem.addEventListener('click', function(e) {
+      iFrame.src = this.dataset.url
+    })
+  })
+</script>
 
-  <div id="chat" class="animated-chat tada" onclick="loadChatbox()">Chat</div>
-  <div class="chatbox" id="chatbox">
+<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.0081%;">
+  <iframe id="myIframe" src="https://player.twitch.tv/?channel=meresbalatv&parent=frangal.xyz" allow="autoplay" ; style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"
+    allow="encrypted-media;"></iframe>
+</div>
+
+<button data-url="https://player.twitch.tv/?channel=meresbalatv&parent=frangal.xyz">MeResbalaTV</button>
+<button data-url="https://player.twitch.tv/?channel=yonkisdelhd&parent=frangal.xyz">YonkisdelHD</button>
+<button data-url="https://ok.ru/videoembed/4525450141203?autoplay=1">OKruD</button>
+<button data-url="https://player.twitch.tv/?channel=teleclasicos&parent=frangal.xyz">TeleClásicos</button>
+
+<style>
+  [data-url]::after {
+    content: attr(data-url)
+  }
+
+  input {
+    float: right;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  #chat,
+  #chat:after,
+  .chatbox {
+    transition: all .4s ease-in-out
+  }
+
+  #chat,
+  #close-chat,
+  .minim-button,
+  .maxi-button,
+  .chat-text {
+    font-weight: 700;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 20px;
+    line-height: 20px
+  }
+
+  #chat,
+  #close-chat,
+  .chatbox {
+    border: 1px solid #A8A8A8
+  }
+
+  #chat:after,
+  #chat:before {
+    position: absolute;
+    border-style: solid;
+    content: ""
+  }
+
+  .chatbox {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    margin: 0 0 -1500px;
+    background: #fff;
+    border-bottom: none;
+    padding: 28px 10px 10px;
+    z-index: 100000
+  }
+
+  #close-chat {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 24px;
+    border: 1px solid #dedede;
+    width: 20px;
+    background: #fefefe;
+    z-index: 2
+  }
+
+  #minim-chat,
+  #maxi-chat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 1
+  }
+
+  .minim-button {
+    position: absolute;
+    top: 2px;
+    right: 26px;
+    font-size: 24px;
+    border: 1px solid #dedede;
+    width: 20px;
+    background: #fefefe
+  }
+
+  .maxi-button {
+    position: absolute;
+    top: 2px;
+    right: 26px;
+    font-size: 24px;
+    border: 1px solid #dedede;
+    width: 20px;
+    background: #fefefe;
+  }
+
+  .chat-text {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 16px;
+  }
+
+  #chat {
+    width: 40px;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 12px;
+    background: #fff;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    float: left;
+  }
+
+  #chat:before {
+    border-width: 10px 11px 0 0;
+    border-color: #A8A8A8 transparent transparent;
+    left: 7px;
+    bottom: -10px
+  }
+
+  #chat:after {
+    border-width: 9px 8px 0 0;
+    border-color: #fff transparent transparent;
+    left: 8px;
+    bottom: -8px
+  }
+
+  #chat:hover {
+    background: #ddd;
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate
+  }
+
+  #chat:hover:after {
+    border-color: #ddd transparent transparent !important
+  }
+
+  .animated-chat {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in
+  }
+
+  @-webkit-keyframes tada {
+    0% {
+      -webkit-transform: scale(1)
+    }
+
+    10%,
+    20% {
+      -webkit-transform: scale(.9)rotate(-3deg)
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: scale(1.1)rotate(3deg)
+    }
+
+    40%,
+    60%,
+    80% {
+      -webkit-transform: scale(1.1)rotate(-3deg)
+    }
+
+    100% {
+      -webkit-transform: scale(1)rotate(0)
+    }
+  }
+
+  @keyframes tada {
+    0% {
+      transform: scale(1)
+    }
+
+    10%,
+    20% {
+      transform: scale(.9)rotate(-3deg)
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: scale(1.1)rotate(3deg)
+    }
+
+    40%,
+    60%,
+    80% {
+      transform: scale(1.1)rotate(-3deg)
+    }
+
+    100% {
+      transform: scale(1)rotate(0)
+    }
+  }
+
+  .tada {
+    -webkit-animation-name: tada;
+    animation-name: tada
+  }
+
+  @-webkit-keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1)
+    }
+  }
+
+  @keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1)
+    }
+  }
+</style>
+
+<div id="chat" class="animated-chat tada" onclick="loadChatbox()">Chat</div>
+<div class="chatbox" id="chatbox">
   <span class="chat-text">Chat</span>
   <script>
-  //<![CDATA[
-  document.write('<div id="smartchatbox_img901621879" style="width: 300px; height: 550px; overflow: hidden; margin: auto; padding: 0;">');
-  document.write('<div id="smartchatbox901621879" style="width: 300px; height: 550px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
-  document.write('<iframe src="https://www.twitch.tv/embed/meresbalatv/chat/?parent=frangal.xyz" scrolling="no" frameborder="0" width="300px" height="550px" style="border:0; margin:0; padding: 0;">');
-  document.write('</iframe></div></div>');
-  //]]>
+    //<![CDATA[
+    document.write('<div id="smartchatbox_img901621879" style="width: 300px; height: 550px; overflow: hidden; margin: auto; padding: 0;">');
+    document.write('<div id="smartchatbox901621879" style="width: 300px; height: 550px; overflow: hidden; margin: auto; padding: 0; border:0; ">');
+    document.write('<iframe src="https://www.twitch.tv/embed/meresbalatv/chat/?parent=frangal.xyz" scrolling="no" frameborder="0" width="300px" height="550px" style="border:0; margin:0; padding: 0;">');
+    document.write('</iframe></div></div>');
+    //]]>
   </script>
   <div id="close-chat" onclick="closeChatbox()">&times;</div>
   <div id="minim-chat" onclick="minimChatbox()"><span class="minim-button">&minus;</span></div>
   <div id="maxi-chat" onclick="loadChatbox()"><span class="maxi-button">&plus;</span></div>
-  </div>
+</div>
 
-  <script>
+<script>
   //<![CDATA[
-  function loadChatbox(){var e=document.getElementById("minim-chat");e.style.display="block";var e=document.getElementById("maxi-chat");e.style.display="none";var e=document.getElementById("chatbox");e.style.margin="0";}
-  function closeChatbox(){var e=document.getElementById("chatbox");e.style.margin="0 0 -1500px 0";}
-  function minimChatbox(){var e=document.getElementById("minim-chat");e.style.display="none";var e=document.getElementById("maxi-chat");e.style.display="block";var e=document.getElementById("chatbox");e.style.margin="0 0 -460px 0";}
+  function loadChatbox() {
+    var e = document.getElementById("minim-chat");
+    e.style.display = "block";
+    var e = document.getElementById("maxi-chat");
+    e.style.display = "none";
+    var e = document.getElementById("chatbox");
+    e.style.margin = "0";
+  }
+
+  function closeChatbox() {
+    var e = document.getElementById("chatbox");
+    e.style.margin = "0 0 -1500px 0";
+  }
+
+  function minimChatbox() {
+    var e = document.getElementById("minim-chat");
+    e.style.display = "none";
+    var e = document.getElementById("maxi-chat");
+    e.style.display = "block";
+    var e = document.getElementById("chatbox");
+    e.style.margin = "0 0 -460px 0";
+  }
   //]]>
-  </script>
+</script>
 
 
 
-  <footer>
-    <a href="https://www.twitch.tv/meresbalatv" target="_blank"><i class="fa fa-twitch"></i></a>
-    <a href="https://twitter.com/FrangaLinux" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.youtube.com/channel/UCB1YhbGFDtgrKIiQY3I0C6w" target="_blank"><i class="fa fa-youtube"></i></a>
-    <a href="https://ok.ru/profile/599856019731" target="_blank"><i class="fa fa-odnoklassniki"></i></a>
-    <a href="https://github.com/FrangaL" target="_blank"><i class="fa fa-github"></i></a>
-  </footer>
+<footer>
+  <a href="https://www.twitch.tv/meresbalatv" target="_blank"><i class="fa fa-twitch"></i></a>
+  <a href="https://twitter.com/FrangaLinux" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.youtube.com/channel/UCB1YhbGFDtgrKIiQY3I0C6w" target="_blank"><i class="fa fa-youtube"></i></a>
+  <a href="https://ok.ru/profile/599856019731" target="_blank"><i class="fa fa-odnoklassniki"></i></a>
+  <a href="https://github.com/FrangaL" target="_blank"><i class="fa fa-github"></i></a>
+</footer>
