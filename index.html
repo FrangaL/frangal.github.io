@@ -28,7 +28,7 @@
 <script>
   Array.prototype.forEach.call(document.querySelectorAll('[data-url]'), elem => {
     elem.addEventListener('click', function(e) {
-      iFrame.src = this.dataset.url
+      myIframe.src = this.dataset.url
     })
   })
 </script>
