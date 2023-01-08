@@ -28,13 +28,13 @@
 <script>
   Array.prototype.forEach.call(document.querySelectorAll('[data-url]'), elem => {
     elem.addEventListener('click', function(e) {
-      myIframe.src = this.dataset.url
+      iFrame.src = this.dataset.url
     })
   })
 </script>
 
 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.0081%;">
-  <iframe id="myIframe" src="https://player.twitch.tv/?channel=meresbalatv&parent=frangal.xyz" allow="autoplay" ; style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"
+  <iframe id="iFrame" allow="autoplay" ; style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no"
     allow="encrypted-media;"></iframe>
 </div>
 
