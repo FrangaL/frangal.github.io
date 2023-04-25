@@ -1,48 +1,1120 @@
-<!DOCTYPE html>
-<html>
-  <style>body{background-color:black}footer{padding:10px 0;text-align:center}footer a{color:#70726f;font-size:20px;padding:10px;transition:.5s}footer a:hover{color:#fff}</style>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" sizes="16x16" href=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADhHpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHja3VdZkts6DPznKd4RBIALeByKS1VukOOnQdF6HtszGScuf4S0uUIg0E1Atus/fwz3Hwrzps6HpDHHuKH47DMXDHQ7SpktbX62s/DawvzDujs3GEuCXo6pxiV/WadTwdEVjMKVIq1rY/+4kf3SrzeK1kFiFpkVbSnKS5HwsUFLQTnc2mLWdO3C3o++XTzR4+usGRdM0tHdzn0Cei3gHGHuQrKhFVkGiH3ZScFA0RKEYLBkjHm2QeKyBIA8wuksGRYNM9U/FPrAyjmix+vuli3PS0RuQI5n/3DdUXjMyoT+6mSva8Qf1wMdSLrtBv0J/mg6ps/wovgIqONy6uLKHEFuxxF2tDqYFqEz4g4peqsZVXGrK65C2+q2o1bKxKBrkKdGhQb12VeqMNFzd5wwYK4sc1ElceYqxp+3SoMTOGxglqVO2r3waQvNY/NW3TxNcXIjiDJBGdm9eLa6Zx8Yw0KBaNMTK9jFbGDDDGPOWoiBERoL1DABvtTbYrwKGAyGsoVIBrD7oWIP9H8mkEm0QDCgP2KQUlsKABGODjCGBAyANZJAEbeBOREBSAVBBaazeN7BAIXADUayF4ngRtmOxiOJpigHxrLDOpIZmEBkSQI3iDKQ5X3A/UlecYdKkOBDCDGkoCGHEiX6GGKMKVpSLEmSdymkmFLSlFNRUa9BoyZVzVoyZ0HSDDnmlDXnXArOLNBc8HSBQCk777L7Pbg97mnXPe+l4vpUX0ONNVWtuZbGTRryR4stNW25lU4dV6n7HnrsqWvPvQxctSFu+BFGHGnoyKOcrC1a7+oTrNFijSdTJphO1rCa0kUFWToJxhkIY+fJ4tcosMxmnG1K3rMxZ5xtmREVgWFkMM4aGWNg0HfiMOjCneODUWPur3hzyX/gjf+UOWfUPcncPW+PWGv2GqqTsSMKDdRNEH2QKaz44F1137vPNp7tf6fI3oc2lD7GlzP3fdGvZ+41ajreIr8T/SZQ7iVIv0fRdBC/S+DjwC2aQ9sd++jTbRvoZQOsPdiU/rxd7jWOfaloucQXC7+eu2cf+Gzu/lbBCy16H9j/gKLH4L3fohVeV/noCL4/jbaXppFpxJkm3o7RmXqOVXcvdo3SJ+HxwHr3ovfjv6to7+4V2dHm7hXZ8b0WfRco96JQu1ckAz//7H/8L6jFOt17mY1zAAABhGlDQ1BJQ0MgcHJvZmlsZQAAeJx9kT1Iw0AcxV9bpUUqInYQUchQO1kQFXHUKhShQqgVWnUwufQLmjQkKS6OgmvBwY/FqoOLs64OroIg+AHi6OSk6CIl/i8ptIjx4Lgf7+497t4B/kaFqWbXOKBqlpFOJoRsblUIviKEMPoxgpjETH1OFFPwHF/38PH1Ls6zvM/9OXqVvMkAn0A8y3TDIt4gnt60dM77xBFWkhTic+Ixgy5I/Mh12eU3zkWH/TwzYmTS88QRYqHYwXIHs5KhEk8RRxVVo3x/1mWF8xZntVJjrXvyF4bz2soy12kOI4lFLEGEABk1lFGBhTitGikm0rSf8PAPOX6RXDK5ymDkWEAVKiTHD/4Hv7s1C5MTblI4AXS/2PbHKBDcBZp12/4+tu3mCRB4Bq60tr/aAGY+Sa+3tegR0LcNXFy3NXkPuNwBBp90yZAcKUDTXygA72f0TTlg4BboWXN7a+3j9AHIUFepG+DgEIgVKXvd492hzt7+PdPq7wdy+3Knd9TbxwAADRppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6YjQ2Y2FmYTEtNGM2Ny00Y2VjLWFhNDQtNTY1M2EzNWNiZTlkIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJkZTM3YzMxLWQyNzgtNDNkYi1hMTkwLTM4MzlkZWI5OTc1MiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjk2N2EwZTY5LTI2OTQtNGYxOC1hMTBjLTgzNTQwYWIzODg5OSIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY2MDMyNTM5NjU5NTI1MSIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjMwIgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmQzMWNkYjk4LTFkM2UtNDJlZi1hMzA2LTJhZWUzYjRkNGFjOCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDgtMTJUMTk6Mjk6NTYrMDI6MDAiLz4KICAgIDwvcmRmOlNlcT4KICAgPC94bXBNTTpIaXN0b3J5PgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+lKLiAAAAAvdQTFRFAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKg4cYAAAAAF0Uk5TAEDm2GYAAAABYktHRACIBR1IAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH5ggMER04vOW7gwAAAEdJREFUOMtjYBgEgIkAIEsByFgghhiPRwETTgUkumGQhgPZChgIKsDqYlQFDATcgE0FSQoIWQGNf7TwZUBNBngVDFxcDAIAAFdcBSPUga7xAAAAAElFTkSuQmCC" />
-  <title>Pelis Random 24/7 - FrangaL</title>
-  <script>
-  function newSite() {
-    var sites = ['https://player.twitch.tv/?channel=fr4ng4l&parent=frangal.xyz',
-                 'https://ok.ru/videoembed/4525450141203?autoplay=1',
-                 'https://player.twitch.tv/?channel=teleclasicos&parent=frangal.xyz']
-    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
-  }
-  </script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Programación #meresbalatv, twitch estadí­sticas</title>
+<style type="text/css" title="default">
+a {	text-decoration: none;}
+a:link {	color: #0b407a;}
+a:visited {	color: #0b407a;}
+a:hover {	text-decoration: underline;	color: #0b407a;}
+a.background {	text-decoration: none;}
+a.background:link {	color: #0b407a;}
+a.background:visited {	color: #0b407a;}
+a.background:hover {	text-decoration: underline;	color: #0b407a;}
+body {	background-color: #dedeee;	font-family: Verdana, Arial, sans-serif;	font-size: 14px;	color: black;}
+#green-h {	height: 15px;	background-repeat: repeat-x;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA8AgMAAADanzhpAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAFElEQVQI12NoYMAHHfBC/OAAPggA1jQWgUt+qs4AAAAASUVORK5CYII=) 0px 0px; }
+#red-h {	height: 15px;	background-repeat: repeat-x;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA8AgMAAADanzhpAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAFElEQVQI12NoYMAHHfBC/OAAPggA1jQWgUt+qs4AAAAASUVORK5CYII=) 0px -15px; }
+#yellow-h {	height: 15px;	background-repeat: repeat-x;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA8AgMAAADanzhpAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAFElEQVQI12NoYMAHHfBC/OAAPggA1jQWgUt+qs4AAAAASUVORK5CYII=) 0px -30px; }
+#blue-h {	height: 15px;	background-repeat: repeat-x;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA8AgMAAADanzhpAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAFElEQVQI12NoYMAHHfBC/OAAPggA1jQWgUt+qs4AAAAASUVORK5CYII=) 0px -45px; }
+#green-v {	width: 15px;	background-repeat: repeat-y;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAABAgMAAAD/diWSAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAGUlEQVQI12NYtWrVytDQ0AAGBgb7////AwA3TAczYjzlogAAAABJRU5ErkJggg==) 0px 0px; }
+#red-v {	width: 15px;	background-repeat: repeat-y;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAABAgMAAAD/diWSAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAGUlEQVQI12NYtWrVytDQ0AAGBgb7////AwA3TAczYjzlogAAAABJRU5ErkJggg==) -15px 0px; }
+#yellow-v {	width: 15px;	background-repeat: repeat-y;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAABAgMAAAD/diWSAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAGUlEQVQI12NYtWrVytDQ0AAGBgb7////AwA3TAczYjzlogAAAABJRU5ErkJggg==) -30px 0px; }
+#blue-v {	width: 15px;	background-repeat: repeat-y;	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAABAgMAAAD/diWSAAAADFBMVEXMzDPMMzNmzDMzZv+sVPgxAAAAGUlEQVQI12NYtWrVytDQ0AAGBgb7////AwA3TAczYjzlogAAAABJRU5ErkJggg==) -45px 0px; }
+td {	border-radius: 5px;	font-family: Verdana, Arial, sans-serif;	font-size: 13px;	color: black;	text-align: left;}
+.male, .male a {	color: #0000DD;}
+.female, .female a {	color: #DD3366;}
+.bot, .bot a {	color: #00FFFF;}
+.title {	font-family: Tahoma, Arial, sans-serif;	font-size: 16px;	font-weight: bold;}
+.headtext {	border-radius: 8px;	color: white;	font-weight: bold;	text-align: center;	background-color: #666699;}
+.headlinebg {	border-radius: 8px;	background-color: #000000;}
+.tdtop {	background-color: #C8C8DD;}
+.hicell {	background-color: #BABADD;}
+.hicell10 {	background-color: #BABADD;	font-size: 10px;}
+.rankc {	background-color: #CCCCCC;}
+.hirankc {	background-color: #AAAAAA;	font-weight: bold;}
+.rankc10 {	background-color: #CCCCCC;	font-size: 10px;}
+.rankc10center {	background-color: #CCCCCC;	font-size: 10px;	text-align: center;}
+.hirankc10center {	background-color: #AAAAAA;	font-weight: bold;	font-size: 10px;	text-align: center;}
+.small {	font-family: Verdana, Arial, sans-serif;	font-size: 10px;}
+.asmall {	font-family: "Arial narrow", Arial, sans-serif;	font-size: 10px;	color: black;	text-align: center;}
+#footer {	width: 400px;	height: 32px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUQ4RDBBQTM0NUJGMTFFMUI3NDhCM0QxMjJGN0E4ODYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUQ4RDBBQTQ0NUJGMTFFMUI3NDhCM0QxMjJGN0E4ODYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1RDhEMEFBMTQ1QkYxMUUxQjc0OEIzRDEyMkY3QTg4NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1RDhEMEFBMjQ1QkYxMUUxQjc0OEIzRDEyMkY3QTg4NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pjybjz0AAAD5UExURf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+vUK5QAAABSdFJOUwADBgkMDxIVGBseISQnKi0wMzY5PD9CRUhLTldaXWNmaWxvcnV4e36BhIeKjZCTlpmcn6KlqKuusbS3ur3Aw8bJzM/S1djb3uHk5+rt8PP2+fysKi1CAAACG0lEQVQ4y21T3XqaUBBcU41ttEFQqklqBCGK1BoSS/yJaA4nIigizPs/TC9ERb/M5c7Onj27s0QniIbNPI/ZhkhfIG8E4Fa31epaHIGRv+SVcK1JLYu5LrNakr4OlXP5NOrIMxzx/qsTTTJFStyVRjiDLXH+48AXuCN5uIBXmfO0Rm7s1bYX9GaGUOTjfYK+rV3qnZIwx1KMFCKiYqS8HYglA4DZuvjx3ABsNcgTkbmqHZXKHMC/+7cmPkQA9VWH6CpUnbPyTNz1TfAbAO9qkKNGUs383wCqLv52EecBJOWkRuZCO4mtO3yKtqWXNh75AH4vDJoObMACEGvXAt0ifrEmj0KxdusAGA7G5LUZIOyG7PEhRJt8MOBhDvSeASzaLq2b/rArN/tOOQa6Qh+qq5kA3lUAy6ZPm6Yf1UnQ7zUHuOc3fn3IAMCX0wSvzV4r7R4b6wIiGYPidN9wXE6fmA5sL9mqQHK9NoeZeZTSJs2FAuBlB+htOT7xgQiguejRXVJJQ7OrZaZA/086qG+hmlopuc0sNZ4cRk3mSk6Dg97F1hurDhF9P67bF875NyXIExE9HQ3zk5+bbm8Yyk0OllPMDL+V+DiXmvbTqXoAwGpZvcMLR9svmTgCgHJ0tL3o8lL2cLa6PAcO/Ex+iqZn15dTw0CT1FfmuuxVlbR1qOYujrNgBGBWp9XqWAyBUfjqwKu9EfN9NupVM8H/S2rN5VNeTiwAAAAASUVORK5CYII=') no-repeat 0 50%;
+}
+</style>
+</head>
+<body>
+<div align="center">
+<h1 class="title" id="pagetitle1">Estamos en ... </h1>
+<a href="https://www.twitch.tv/meresbalatv">https://www.twitch.tv/meresbalatv</a><br><br>
 
-  <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.0081%;" >
-    <iframe id="myIframe" src="https://player.twitch.tv/?channel=fr4ng4l&parent=frangal.xyz" allow="autoplay" ; style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="encrypted-media;"></iframe>
-  </div>
-  <input type="button" value="Cambiar canal" onClick="newSite()" />
+<h1 class="title" id="pagetitle1">Estadí­sticas twitch canal #meresbalatv</h1>
+<span id="pagetitle3">Durante los 65 días de estadísticas, 686 nicks distintos han pasado por #meresbalatv.</span></p>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Actividad diaria (31 últimos días)</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0"><tr>
+<td align="center" valign="bottom" class="asmall">118<br />
+
+</td>
+<td align="center" valign="bottom" class="asmall">424<br />
 
 
-  <style>
-  input { float: right; font-weight: 700; font-size: 12px;}
-  #chat,#chat:after,.chatbox{transition:all .4s ease-in-out}
-  #chat,#close-chat,.minim-button,.maxi-button,.chat-text{font-weight:700;cursor:pointer;font-family:Arial,sans-serif;text-align:center;height:20px;line-height:20px}
-  #chat,#close-chat,.chatbox{border:1px solid #A8A8A8}
-  #chat:after,#chat:before{position:absolute;border-style:solid;content:""}
-  .chatbox{position:fixed;bottom:0;left:50px;margin:0 0 -1500px;background:#fff;border-bottom:none;padding:28px 10px 10px;z-index:100000}
-  #close-chat{position:absolute;top:2px;right:2px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe;z-index:2}
-  #minim-chat,#maxi-chat{position:absolute;top:0;left:0;width:100%;height:20px;line-height:20px;cursor:pointer;z-index:1}
-  .minim-button{position:absolute;top:2px;right:26px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe}
-  .maxi-button{position:absolute;top:2px;right:26px;font-size:24px;border:1px solid #dedede;width:20px;background:#fefefe;}
-  .chat-text{position:absolute;top:5px;left:10px;font-size:16px;}
-  #chat{width:40px;border-radius:3px;padding:2px 8px;font-size:12px;background:#fff;-webkit-transform:translateZ(0);transform:translateZ(0); float: left;}
-  #chat:before{border-width:10px 11px 0 0;border-color:#A8A8A8 transparent transparent;left:7px;bottom:-10px}
-  #chat:after{border-width:9px 8px 0 0;border-color:#fff transparent transparent;left:8px;bottom:-8px}
-  #chat:hover{background:#ddd;-webkit-animation-name:hvr-pulse-grow;animation-name:hvr-pulse-grow;-webkit-animation-duration:.3s;animation-duration:.3s;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-direction:alternate}
-  #chat:hover:after{border-color:#ddd transparent transparent!important}
-  .animated-chat{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}
-  @-webkit-keyframes tada{0%{-webkit-transform:scale(1)}
-  10%,20%{-webkit-transform:scale(.9)rotate(-3deg)}
-  30%,50%,70%,90%{-webkit-transform:scale(1.1)rotate(3deg)}
-  40%,60%,80%{-webkit-transform:scale(1.1)rotate(-3deg)}
-  100%{-webkit-transform:scale(1)rotate(0)}
-  }
+
+</td>
+<td align="center" valign="bottom" class="asmall">297<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">458<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">1103<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">505<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">402<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">421<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2776<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">959<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">168<br />
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">107<br />
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">348<br />
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">514<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">926<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">242<br />
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">710<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">849<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">1905<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2473<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2206<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2205<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">1478<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2194<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">1550<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">2523<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">918<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">3154<br />
+
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">723<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">212<br />
+
+
+
+</td>
+<td align="center" valign="bottom" class="asmall">729<br />
+
+
+
+
+</td>
+</tr><tr>
+<td class="rankc10center" align="center">30</td>
+<td class="rankc10center" align="center">29</td>
+<td class="rankc10center" align="center">28</td>
+<td class="rankc10center" align="center">27</td>
+<td class="rankc10center" align="center">26</td>
+<td class="rankc10center" align="center">25</td>
+<td class="rankc10center" align="center">24</td>
+<td class="rankc10center" align="center">23</td>
+<td class="rankc10center" align="center">22</td>
+<td class="rankc10center" align="center">21</td>
+<td class="rankc10center" align="center">20</td>
+<td class="rankc10center" align="center">19</td>
+<td class="rankc10center" align="center">18</td>
+<td class="rankc10center" align="center">17</td>
+<td class="rankc10center" align="center">16</td>
+<td class="rankc10center" align="center">15</td>
+<td class="rankc10center" align="center">14</td>
+<td class="rankc10center" align="center">13</td>
+<td class="rankc10center" align="center">12</td>
+<td class="rankc10center" align="center">11</td>
+<td class="rankc10center" align="center">10</td>
+<td class="rankc10center" align="center">9</td>
+<td class="rankc10center" align="center">8</td>
+<td class="rankc10center" align="center">7</td>
+<td class="rankc10center" align="center">6</td>
+<td class="rankc10center" align="center">5</td>
+<td class="rankc10center" align="center">4</td>
+<td class="rankc10center" align="center">3</td>
+<td class="rankc10center" align="center">2</td>
+<td class="rankc10center" align="center">1</td>
+<td class="rankc10center" align="center">0</td>
+</tr></table>
+<table align="center" border="0" width="520"><tr>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" width="40" height="15" align="middle" alt="0-5" /> = 0-5</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" width="40" height="15" align="middle" alt="6-11" /> = 6-11</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" width="40" height="15" align="middle" alt="12-17" /> = 12-17</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" width="40" height="15" align="middle" alt="18-23" /> = 18-23</td>
+</tr></table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Horas más frecuentadas</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0"><tr>
+<td align="center" valign="bottom" class="asmall">9.3%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="100" alt="5882" title="5882"/></td>
+<td align="center" valign="bottom" class="asmall">7.4%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="79" alt="4693" title="4693"/></td>
+<td align="center" valign="bottom" class="asmall">4.5%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="48" alt="2828" title="2828"/></td>
+<td align="center" valign="bottom" class="asmall">3.6%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="38" alt="2282" title="2282"/></td>
+<td align="center" valign="bottom" class="asmall">1.9%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="19" alt="1176" title="1176"/></td>
+<td align="center" valign="bottom" class="asmall">0.7%<br /><img id="blue-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="7" alt="443" title="443"/></td>
+<td align="center" valign="bottom" class="asmall">0.3%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="3" alt="205" title="205"/></td>
+<td align="center" valign="bottom" class="asmall">0.3%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="3" alt="192" title="192"/></td>
+<td align="center" valign="bottom" class="asmall">1.0%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="11" alt="656" title="656"/></td>
+<td align="center" valign="bottom" class="asmall">1.4%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="14" alt="866" title="866"/></td>
+<td align="center" valign="bottom" class="asmall">2.4%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="25" alt="1524" title="1524"/></td>
+<td align="center" valign="bottom" class="asmall">2.9%<br /><img id="green-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="31" alt="1854" title="1854"/></td>
+<td align="center" valign="bottom" class="asmall">3.4%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="36" alt="2141" title="2141"/></td>
+<td align="center" valign="bottom" class="asmall">4.2%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="45" alt="2661" title="2661"/></td>
+<td align="center" valign="bottom" class="asmall">3.9%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="42" alt="2474" title="2474"/></td>
+<td align="center" valign="bottom" class="asmall">4.2%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="45" alt="2664" title="2664"/></td>
+<td align="center" valign="bottom" class="asmall">5.2%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="55" alt="3289" title="3289"/></td>
+<td align="center" valign="bottom" class="asmall">5.1%<br /><img id="yellow-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="54" alt="3203" title="3203"/></td>
+<td align="center" valign="bottom" class="asmall">5.0%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="54" alt="3197" title="3197"/></td>
+<td align="center" valign="bottom" class="asmall">4.2%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="45" alt="2679" title="2679"/></td>
+<td align="center" valign="bottom" class="asmall">5.0%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="53" alt="3145" title="3145"/></td>
+<td align="center" valign="bottom" class="asmall">6.3%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="68" alt="4003" title="4003"/></td>
+<td align="center" valign="bottom" class="asmall">8.8%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="95" alt="5595" title="5595"/></td>
+<td align="center" valign="bottom" class="asmall">8.6%<br /><img id="red-v" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" width="15" height="93" alt="5473" title="5473"/></td>
+</tr><tr>
+<td class="hirankc10center" align="center">0</td>
+<td class="rankc10center" align="center">1</td>
+<td class="rankc10center" align="center">2</td>
+<td class="rankc10center" align="center">3</td>
+<td class="rankc10center" align="center">4</td>
+<td class="rankc10center" align="center">5</td>
+<td class="rankc10center" align="center">6</td>
+<td class="rankc10center" align="center">7</td>
+<td class="rankc10center" align="center">8</td>
+<td class="rankc10center" align="center">9</td>
+<td class="rankc10center" align="center">10</td>
+<td class="rankc10center" align="center">11</td>
+<td class="rankc10center" align="center">12</td>
+<td class="rankc10center" align="center">13</td>
+<td class="rankc10center" align="center">14</td>
+<td class="rankc10center" align="center">15</td>
+<td class="rankc10center" align="center">16</td>
+<td class="rankc10center" align="center">17</td>
+<td class="rankc10center" align="center">18</td>
+<td class="rankc10center" align="center">19</td>
+<td class="rankc10center" align="center">20</td>
+<td class="rankc10center" align="center">21</td>
+<td class="rankc10center" align="center">22</td>
+<td class="rankc10center" align="center">23</td>
+</tr></table>
+<table align="center" border="0" width="520"><tr>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" width="40" height="15" align="middle" alt="0-5" /> = 0-5</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" width="40" height="15" align="middle" alt="6-11" /> = 6-11</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" width="40" height="15" align="middle" alt="12-17" /> = 12-17</td>
+<td align="center" class="asmall"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" width="40" height="15" align="middle" alt="18-23" /> = 18-23</td>
+</tr></table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">La gente que más habla</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0" width="929"><tr><td>&nbsp;</td><td class="tdtop"><b>Nick</b></td><td class="tdtop"><b>Líneas</b></td><td class="tdtop"><b>Hora</b></td><td class="tdtop"><b>palabras</b></td><td class="tdtop"><b>Palabras por línea</b></td><td class="tdtop"><b>letras por línea</b></td><td class="tdtop"><b>Visto por última vez</b></td><td class="tdtop"><b>Frase al azar</b></td>
+
+</tr>
+<tr><td class="hirankc" align="left">1</td>
+<td style="background-color: #babadc"><span>tremebundus666</span></td><td style="background-color: #babadc" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="28" height="15" align="middle" alt="1037" title="1037" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="6" height="15" align="middle" alt="232" title="232" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="30" height="15" align="middle" alt="1098" title="1098" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="34" height="15" align="middle" alt="1268" title="1268" />&nbsp;3635</td><td style="background-color: #babadc"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="11" height="15" alt="1037" title="1037" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" alt="232" title="232" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="12" height="15" alt="1098" title="1098" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="13" height="15" alt="1268" title="1268" /></td><td style="background-color: #babadc">24952</td><td style="background-color: #babadc">6.9</td><td style="background-color: #babadc">36.4</td><td style="background-color: #babadc">días atrás</td><td style="background-color: #babadc">"pues intenta ir sereno, y asi la comentamos"</td>
+</tr>
+<tr><td class="rankc" align="left">2</td>
+<td style="background-color: #bbbbdb"><span>luis_bandido</span></td><td style="background-color: #bbbbdb" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="35" height="15" align="middle" alt="1306" title="1306" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="14" height="15" align="middle" alt="534" title="534" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="9" height="15" align="middle" alt="360" title="360" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="29" height="15" align="middle" alt="1080" title="1080" />&nbsp;3280</td><td style="background-color: #bbbbdb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="15" height="15" alt="1306" title="1306" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="6" height="15" alt="534" title="534" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="4" height="15" alt="360" title="360" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="13" height="15" alt="1080" title="1080" /></td><td style="background-color: #bbbbdb">17365</td><td style="background-color: #bbbbdb">5.3</td><td style="background-color: #bbbbdb">31.3</td><td style="background-color: #bbbbdb">día atrás</td><td style="background-color: #bbbbdb">"@SIGMA_86 todos aquí­ somos nostálgicos"</td>
+</tr>
+<tr><td class="rankc" align="left">3</td>
+<td style="background-color: #bcbcda"><span>lauradumbi</span></td><td style="background-color: #bcbcda" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="39" height="15" align="middle" alt="1452" title="1452" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" align="middle" alt="97" title="97" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="10" height="15" align="middle" alt="386" title="386" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="29" height="15" align="middle" alt="1077" title="1077" />&nbsp;3012</td><td style="background-color: #bcbcda"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="19" height="15" alt="1452" title="1452" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" alt="97" title="97" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="5" height="15" alt="386" title="386" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="14" height="15" alt="1077" title="1077" /></td><td style="background-color: #bcbcda">16286</td><td style="background-color: #bcbcda">5.4</td><td style="background-color: #bcbcda">33.7</td><td style="background-color: #bcbcda">día atrás</td><td style="background-color: #bcbcda">"@imperium_hispanicum  HeyGuys"</td>
+</tr>
+<tr><td class="rankc" align="left">4</td>
+<td style="background-color: #bcbcda"><span>quiquecillo</span></td><td style="background-color: #bcbcda" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="22" height="15" align="middle" alt="836" title="836" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="3" height="15" align="middle" alt="136" title="136" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="10" height="15" align="middle" alt="384" title="384" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="27" height="15" align="middle" alt="1002" title="1002" />&nbsp;2358</td><td style="background-color: #bcbcda"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="14" height="15" alt="836" title="836" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" alt="136" title="136" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="6" height="15" alt="384" title="384" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="16" height="15" alt="1002" title="1002" /></td><td style="background-color: #bcbcda">11201</td><td style="background-color: #bcbcda">4.8</td><td style="background-color: #bcbcda">24.2</td><td style="background-color: #bcbcda">Hoy</td><td style="background-color: #bcbcda">"rascamiento de pastes si, enseñar no he visto"</td>
+</tr>
+<tr><td class="rankc" align="left">5</td>
+<td style="background-color: #bdbdd9"><span>rad_101</span></td><td style="background-color: #bdbdd9" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="11" height="15" align="middle" alt="417" title="417" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" align="middle" alt="78" title="78" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="20" height="15" align="middle" alt="739" title="739" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="25" height="15" align="middle" alt="933" title="933" />&nbsp;2167</td><td style="background-color: #bdbdd9"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="7" height="15" alt="417" title="417" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" alt="78" title="78" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="13" height="15" alt="739" title="739" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="17" height="15" alt="933" title="933" /></td><td style="background-color: #bdbdd9">12593</td><td style="background-color: #bdbdd9">5.8</td><td style="background-color: #bdbdd9">32.1</td><td style="background-color: #bdbdd9">Hoy</td><td style="background-color: #bdbdd9">"@yobegdir me referí­a a los protas de la peli :D"</td>
+</tr>
+<tr><td class="rankc" align="left">6</td>
+<td style="background-color: #bebed8"><span>doncarreira</span></td><td style="background-color: #bebed8" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="20" height="15" align="middle" alt="759" title="759" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" align="middle" alt="42" title="42" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="19" height="15" align="middle" alt="722" title="722" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="14" height="15" align="middle" alt="544" title="544" />&nbsp;2067</td><td style="background-color: #bebed8"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="14" height="15" alt="759" title="759" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="13" height="15" alt="722" title="722" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="10" height="15" alt="544" title="544" /></td><td style="background-color: #bebed8">16011</td><td style="background-color: #bebed8">7.7</td><td style="background-color: #bebed8">41.1</td><td style="background-color: #bebed8">Hoy</td><td style="background-color: #bebed8">"como el del programa de la tele xD"</td>
+</tr>
+<tr><td class="rankc" align="left">7</td>
+<td style="background-color: #bfbfd8"><span>escuartizator</span></td><td style="background-color: #bfbfd8" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="1" height="15" align="middle" alt="66" title="66" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="5" height="15" align="middle" alt="210" title="210" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="18" height="15" align="middle" alt="657" title="657" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="26" height="15" align="middle" alt="966" title="966" />&nbsp;1899</td><td style="background-color: #bfbfd8"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="1" height="15" alt="66" title="66" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="4" height="15" alt="210" title="210" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="13" height="15" alt="657" title="657" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="20" height="15" alt="966" title="966" /></td><td style="background-color: #bfbfd8">11181</td><td style="background-color: #bfbfd8">5.9</td><td style="background-color: #bfbfd8">30.5</td><td style="background-color: #bfbfd8">Hoy</td><td style="background-color: #bfbfd8">"esto es como la versión macarra de momo"</td>
+</tr>
+<tr><td class="rankc" align="left">8</td>
+<td style="background-color: #bfbfd7"><span>tutankabron2022</span></td><td style="background-color: #bfbfd7" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="18" height="15" align="middle" alt="657" title="657" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="8" height="15" align="middle" alt="302" title="302" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="22" height="15" align="middle" alt="823" title="823" />&nbsp;1782</td><td style="background-color: #bfbfd7"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="14" height="15" alt="657" title="657" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="6" height="15" alt="302" title="302" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="18" height="15" alt="823" title="823" /></td><td style="background-color: #bfbfd7">15364</td><td style="background-color: #bfbfd7">8.6</td><td style="background-color: #bfbfd7">49.0</td><td style="background-color: #bfbfd7">Hoy</td><td style="background-color: #bfbfd7">"@lordviejo Yo la cólera de Dios jaja"</td>
+</tr>
+<tr><td class="rankc" align="left">9</td>
+<td style="background-color: #c0c0d6"><span>nimasnimenos10</span></td><td style="background-color: #c0c0d6" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="32" height="15" align="middle" alt="1176" title="1176" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="16" height="15" align="middle" alt="590" title="590" />&nbsp;1766</td><td style="background-color: #c0c0d6"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="26" height="15" alt="1176" title="1176" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="13" height="15" alt="590" title="590" /></td><td style="background-color: #c0c0d6">14184</td><td style="background-color: #c0c0d6">8.0</td><td style="background-color: #c0c0d6">49.0</td><td style="background-color: #c0c0d6">día atrás</td><td style="background-color: #c0c0d6">"Buenas noches a tod@s  buena peli, no la habia visto nunca...!"</td>
+</tr>
+<tr><td class="rankc" align="left">10</td>
+<td style="background-color: #c1c1d6"><span>vanditgamers</span></td><td style="background-color: #c1c1d6" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="3" height="15" align="middle" alt="123" title="123" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="2" height="15" align="middle" alt="105" title="105" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="33" height="15" align="middle" alt="1210" title="1210" />&nbsp;1443</td><td style="background-color: #c1c1d6"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="3" height="15" alt="123" title="123" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="2" height="15" alt="105" title="105" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="33" height="15" alt="1210" title="1210" /></td><td style="background-color: #c1c1d6">8686</td><td style="background-color: #c1c1d6">6.0</td><td style="background-color: #c1c1d6">30.7</td><td style="background-color: #c1c1d6">Hoy</td><td style="background-color: #c1c1d6">"Un litro de aceite imaginate"</td>
+</tr>
+<tr><td class="rankc" align="left">11</td>
+<td style="background-color: #c1c1d5"><span>erebolucifer</span></td><td style="background-color: #c1c1d5" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="21" height="15" align="middle" alt="797" title="797" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="17" height="15" align="middle" alt="619" title="619" />&nbsp;1416</td><td style="background-color: #c1c1d5"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="22" height="15" alt="797" title="797" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="17" height="15" alt="619" title="619" /></td><td style="background-color: #c1c1d5">10780</td><td style="background-color: #c1c1d5">7.6</td><td style="background-color: #c1c1d5">40.5</td><td style="background-color: #c1c1d5">día atrás</td><td style="background-color: #c1c1d5">"El ultimo mojino... Es la peli de los mojinos escozios?"</td>
+</tr>
+<tr><td class="rankc" align="left">12</td>
+<td style="background-color: #c2c2d4"><span>m4nolillo88</span></td><td style="background-color: #c2c2d4" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="5" height="15" align="middle" alt="188" title="188" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="3" height="15" align="middle" alt="132" title="132" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="25" height="15" align="middle" alt="926" title="926" />&nbsp;1246</td><td style="background-color: #c2c2d4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="6" height="15" alt="188" title="188" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="4" height="15" alt="132" title="132" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="29" height="15" alt="926" title="926" /></td><td style="background-color: #c2c2d4">5657</td><td style="background-color: #c2c2d4">4.5</td><td style="background-color: #c2c2d4">21.6</td><td style="background-color: #c2c2d4">Hoy</td><td style="background-color: #c2c2d4">"no se no a dicho na malo no"</td>
+</tr>
+<tr><td class="rankc" align="left">13</td>
+<td style="background-color: #c3c3d4"><span>reina_lenina</span></td><td style="background-color: #c3c3d4" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="10" height="15" align="middle" alt="389" title="389" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="7" height="15" align="middle" alt="259" title="259" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="11" height="15" align="middle" alt="416" title="416" />&nbsp;1068</td><td style="background-color: #c3c3d4"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="14" height="15" alt="389" title="389" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="9" height="15" alt="259" title="259" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="15" height="15" alt="416" title="416" /></td><td style="background-color: #c3c3d4">10587</td><td style="background-color: #c3c3d4">9.9</td><td style="background-color: #c3c3d4">52.6</td><td style="background-color: #c3c3d4">Hoy</td><td style="background-color: #c3c3d4">"es el leonard de big bang! esta super hecho polvo"</td>
+</tr>
+<tr><td class="rankc" align="left">14</td>
+<td style="background-color: #c4c4d3"><span>tortilloesp</span></td><td style="background-color: #c4c4d3" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="3" height="15" align="middle" alt="117" title="117" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="9" height="15" align="middle" alt="354" title="354" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="14" height="15" align="middle" alt="531" title="531" />&nbsp;1002</td><td style="background-color: #c4c4d3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="4" height="15" alt="117" title="117" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="14" height="15" alt="354" title="354" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="21" height="15" alt="531" title="531" /></td><td style="background-color: #c4c4d3">3675</td><td style="background-color: #c4c4d3">3.7</td><td style="background-color: #c4c4d3">20.5</td><td style="background-color: #c4c4d3">días atrás</td><td style="background-color: #c4c4d3">"Squid1 Squid2 Squid3 Squid2 Squid4"</td>
+</tr>
+<tr><td class="rankc" align="left">15</td>
+<td style="background-color: #c4c4d2"><span>ekaitzis200</span></td><td style="background-color: #c4c4d2" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="2" height="15" align="middle" alt="93" title="93" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="10" height="15" align="middle" alt="384" title="384" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="14" height="15" align="middle" alt="522" title="522" />&nbsp;1002</td><td style="background-color: #c4c4d2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="3" height="15" alt="93" title="93" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="15" height="15" alt="384" title="384" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="20" height="15" alt="522" title="522" /></td><td style="background-color: #c4c4d2">4236</td><td style="background-color: #c4c4d2">4.2</td><td style="background-color: #c4c4d2">21.6</td><td style="background-color: #c4c4d2">Hoy</td><td style="background-color: #c4c4d2">"muy wapa esta peli, no la habia visto"</td>
+</tr>
+<tr><td class="rankc" align="left">16</td>
+<td style="background-color: #c5c5d2"><span>jota_hache_</span></td><td style="background-color: #c5c5d2" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="3" height="15" align="middle" alt="133" title="133" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="3" height="15" align="middle" alt="118" title="118" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="14" height="15" align="middle" alt="544" title="544" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="5" height="15" align="middle" alt="195" title="195" />&nbsp;990</td><td style="background-color: #c5c5d2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="5" height="15" alt="133" title="133" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="4" height="15" alt="118" title="118" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="21" height="15" alt="544" title="544" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="7" height="15" alt="195" title="195" /></td><td style="background-color: #c5c5d2">8821</td><td style="background-color: #c5c5d2">8.9</td><td style="background-color: #c5c5d2">47.9</td><td style="background-color: #c5c5d2">Hoy</td><td style="background-color: #c5c5d2">"40? eso es edad de adolescente :D"</td>
+</tr>
+<tr><td class="rankc" align="left">17</td>
+<td style="background-color: #c6c6d1"><span>temerario87</span></td><td style="background-color: #c6c6d1" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="1" height="15" align="middle" alt="57" title="57" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="14" height="15" align="middle" alt="525" title="525" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="9" height="15" align="middle" alt="339" title="339" />&nbsp;956</td><td style="background-color: #c6c6d1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="2" height="15" alt="57" title="57" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" alt="35" title="35" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="21" height="15" alt="525" title="525" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="14" height="15" alt="339" title="339" /></td><td style="background-color: #c6c6d1">4182</td><td style="background-color: #c6c6d1">4.4</td><td style="background-color: #c6c6d1">26.9</td><td style="background-color: #c6c6d1">Hoy</td><td style="background-color: #c6c6d1">"ninguna....fué un golpe que me di de pequeño @lordviejo LUL"</td>
+</tr>
+<tr><td class="rankc" align="left">18</td>
+<td style="background-color: #c6c6d0"><span>zanac_77</span></td><td style="background-color: #c6c6d0" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="9" height="15" align="middle" alt="344" title="344" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="12" height="15" align="middle" alt="455" title="455" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="4" height="15" align="middle" alt="148" title="148" />&nbsp;948</td><td style="background-color: #c6c6d0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="14" height="15" alt="344" title="344" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="19" height="15" alt="455" title="455" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="6" height="15" alt="148" title="148" /></td><td style="background-color: #c6c6d0">4998</td><td style="background-color: #c6c6d0">5.3</td><td style="background-color: #c6c6d0">32.0</td><td style="background-color: #c6c6d0">días atrás</td><td style="background-color: #c6c6d0">"@melasudatv  holaaaa ya de vuelta  a fullllll KonCha"</td>
+</tr>
+<tr><td class="rankc" align="left">19</td>
+<td style="background-color: #c7c7d0"><span>kngashzmorda</span></td><td style="background-color: #c7c7d0" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="7" height="15" align="middle" alt="283" title="283" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="3" height="15" align="middle" alt="134" title="134" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="13" height="15" align="middle" alt="481" title="481" />&nbsp;918</td><td style="background-color: #c7c7d0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="12" height="15" alt="283" title="283" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="5" height="15" alt="134" title="134" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="20" height="15" alt="481" title="481" /></td><td style="background-color: #c7c7d0">6365</td><td style="background-color: #c7c7d0">6.9</td><td style="background-color: #c7c7d0">38.2</td><td style="background-color: #c7c7d0">días atrás</td><td style="background-color: #c7c7d0">"con la guapisima melanie griffith"</td>
+</tr>
+<tr><td class="rankc" align="left">20</td>
+<td style="background-color: #c8c8cf"><span>karis_z</span></td><td style="background-color: #c8c8cf" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="14" height="15" align="middle" alt="529" title="529" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="1" height="15" align="middle" alt="62" title="62" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="6" height="15" align="middle" alt="223" title="223" />&nbsp;814</td><td style="background-color: #c8c8cf"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="25" height="15" alt="529" title="529" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="3" height="15" alt="62" title="62" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="10" height="15" alt="223" title="223" /></td><td style="background-color: #c8c8cf">6689</td><td style="background-color: #c8c8cf">8.2</td><td style="background-color: #c8c8cf">44.8</td><td style="background-color: #c8c8cf">Hoy</td><td style="background-color: #c8c8cf">"@temerario87 eso me husta decir a las mujeres"</td>
+</tr>
+<tr><td class="rankc" align="left">21</td>
+<td style="background-color: #c9c9ce"><span>quinientoseuros</span></td><td style="background-color: #c9c9ce" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="11" height="15" align="middle" alt="418" title="418" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="4" height="15" align="middle" alt="157" title="157" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="5" height="15" align="middle" alt="194" title="194" />&nbsp;771</td><td style="background-color: #c9c9ce"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="21" height="15" alt="418" title="418" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="8" height="15" alt="157" title="157" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="10" height="15" alt="194" title="194" /></td><td style="background-color: #c9c9ce">2316</td><td style="background-color: #c9c9ce">3.0</td><td style="background-color: #c9c9ce">22.0</td><td style="background-color: #c9c9ce">día atrás</td><td style="background-color: #c9c9ce">"SirUwU SirPrise SirSad SirMad"</td>
+</tr>
+<tr><td class="rankc" align="left">22</td>
+<td style="background-color: #c9c9ce"><span>cibernoman</span></td><td style="background-color: #c9c9ce" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="4" height="15" align="middle" alt="179" title="179" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="4" height="15" align="middle" alt="159" title="159" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="5" height="15" align="middle" alt="197" title="197" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="6" height="15" align="middle" alt="222" title="222" />&nbsp;757</td><td style="background-color: #c9c9ce"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="9" height="15" alt="179" title="179" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="8" height="15" alt="159" title="159" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="10" height="15" alt="197" title="197" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="11" height="15" alt="222" title="222" /></td><td style="background-color: #c9c9ce">3830</td><td style="background-color: #c9c9ce">5.1</td><td style="background-color: #c9c9ce">26.8</td><td style="background-color: #c9c9ce">días atrás</td><td style="background-color: #c9c9ce">"osea, mandas una nota de audio y voicy la trascribe"</td>
+</tr>
+<tr><td class="rankc" align="left">23</td>
+<td style="background-color: #cacacd"><span>elrincondepepe</span></td><td style="background-color: #cacacd" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" align="middle" alt="55" title="55" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="15" height="15" align="middle" alt="569" title="569" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="3" height="15" align="middle" alt="126" title="126" />&nbsp;752</td><td style="background-color: #cacacd"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" alt="55" title="55" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="30" height="15" alt="569" title="569" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="6" height="15" alt="126" title="126" /></td><td style="background-color: #cacacd">6054</td><td style="background-color: #cacacd">8.1</td><td style="background-color: #cacacd">42.5</td><td style="background-color: #cacacd">Hoy</td><td style="background-color: #cacacd">"@temerario87 a lorenzo lamas creo que era XD"</td>
+</tr>
+<tr><td class="rankc" align="left">24</td>
+<td style="background-color: #cbcbcc"><span>satirida</span></td><td style="background-color: #cbcbcc" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="2" height="15" align="middle" alt="108" title="108" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" align="middle" alt="58" title="58" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="5" height="15" align="middle" alt="188" title="188" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="10" height="15" align="middle" alt="379" title="379" />&nbsp;733</td><td style="background-color: #cbcbcc"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="5" height="15" alt="108" title="108" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="3" height="15" alt="58" title="58" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="10" height="15" alt="188" title="188" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="20" height="15" alt="379" title="379" /></td><td style="background-color: #cbcbcc">3003</td><td style="background-color: #cbcbcc">4.1</td><td style="background-color: #cbcbcc">23.0</td><td style="background-color: #cbcbcc">días atrás</td><td style="background-color: #cbcbcc">"Agotado pero no callas, abuelo"</td>
+</tr>
+<tr><td class="rankc" align="left">25</td>
+<td style="background-color: #cccccc"><span>er4manu</span></td><td style="background-color: #cccccc" nowrap="nowrap"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="11" height="15" align="middle" alt="420" title="420" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="1" height="15" align="middle" alt="50" title="50" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="6" height="15" align="middle" alt="231" title="231" />&nbsp;716</td><td style="background-color: #cccccc"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="23" height="15" alt="420" title="420" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="2" height="15" alt="50" title="50" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="12" height="15" alt="231" title="231" /></td><td style="background-color: #cccccc">4741</td><td style="background-color: #cccccc">6.6</td><td style="background-color: #cccccc">35.3</td><td style="background-color: #cccccc">Hoy</td><td style="background-color: #cccccc">"están arrestados por diversión ilegal"</td>
+</tr>
+</table><br />
+<br /><b><i>Ellos también están, aunque hablan menos:</i></b><table><tr>
+<td class="rankc10"><span>bego235 (707)</span></td>
+<td class="rankc10"><span>frangarcia1980 (684)</span></td>
+<td class="rankc10"><span>the_tarmac_ (667)</span></td>
+<td class="rankc10"><span>elgamermanco (664)</span></td>
+<td class="rankc10"><span>kodeneko (657)</span></td>
+</tr><tr>
+<td class="rankc10"><span>ryzenjitsu (588)</span></td>
+<td class="rankc10"><span>sigma_86 (571)</span></td>
+<td class="rankc10"><span>javierpelluz (560)</span></td>
+<td class="rankc10"><span>lostintheec (509)</span></td>
+<td class="rankc10"><span>mrsandman_77 (466)</span></td>
+</tr><tr>
+<td class="rankc10"><span>atpeu (457)</span></td>
+<td class="rankc10"><span>osacaru (430)</span></td>
+<td class="rankc10"><span>imperium_hispanicum (414)</span></td>
+<td class="rankc10"><span>tkmaniaco (410)</span></td>
+<td class="rankc10"><span>davidbm77 (382)</span></td>
+</tr><tr>
+<td class="rankc10"><span>adryvag (374)</span></td>
+<td class="rankc10"><span>nick_niano_niano (359)</span></td>
+<td class="rankc10"><span>inochanx (337)</span></td>
+<td class="rankc10"><span>juliandiezblanco (322)</span></td>
+<td class="rankc10"><span>ssamendi (316)</span></td>
+</tr><tr>
+<td class="rankc10"><span>emarijav (307)</span></td>
+<td class="rankc10"><span>ferblacky (284)</span></td>
+<td class="rankc10"><span>patati19 (276)</span></td>
+<td class="rankc10"><span>recre_onuba (275)</span></td>
+<td class="rankc10"><span>aresdam (267)</span></td>
+</tr><tr>
+<td class="rankc10"><span>grijano (262)</span></td>
+<td class="rankc10"><span>grumpyardias (257)</span></td>
+<td class="rankc10"><span>innercia (247)</span></td>
+<td class="rankc10"><span>erilin (240)</span></td>
+<td class="rankc10"><span>p4co_p3ri (238)</span></td>
+</tr></table>
+<br /><b>Ha habido otros 631 nicks que han pasado por el canal</b><br />
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">La gente que más habla por horas</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0" width="929"><tr>
+<td>&nbsp;</td>
+<td class="tdtop"><b>0-5</b></td>
+<td class="tdtop"><b>6-11</b></td>
+<td class="tdtop"><b>12-17</b></td>
+<td class="tdtop"><b>18-23</b></td>
+</tr>
+<tr><td class="hirankc">1</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="100" height="15" align="middle" alt="" />
+lauradumbi - 1452
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="54" height="15" align="middle" alt="" />
+erebolucifer - 797
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="75" height="15" align="middle" alt="" />
+tremebundus666 - 1098
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="87" height="15" align="middle" alt="" />
+tremebundus666 - 1268
+</td>
+</tr>
+<tr><td class="rankc">2</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="89" height="15" align="middle" alt="" />
+luis_bandido - 1306
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="36" height="15" align="middle" alt="" />
+luis_bandido - 534
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="50" height="15" align="middle" alt="" />
+rad_101 - 739
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="83" height="15" align="middle" alt="" />
+vanditgamers - 1210
+</td>
+</tr>
+<tr><td class="rankc">3</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="80" height="15" align="middle" alt="" />
+nimasnimenos10 - 1176
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="23" height="15" align="middle" alt="" />
+zanac_77 - 344
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="49" height="15" align="middle" alt="" />
+doncarreira - 722
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="74" height="15" align="middle" alt="" />
+luis_bandido - 1080
+</td>
+</tr>
+<tr><td class="rankc">4</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="71" height="15" align="middle" alt="" />
+tremebundus666 - 1037
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="15" height="15" align="middle" alt="" />
+tremebundus666 - 232
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="45" height="15" align="middle" alt="" />
+escuartizator - 657
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="74" height="15" align="middle" alt="" />
+lauradumbi - 1077
+</td>
+</tr>
+<tr><td class="rankc">5</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="57" height="15" align="middle" alt="" />
+quiquecillo - 836
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="14" height="15" align="middle" alt="" />
+escuartizator - 210
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="42" height="15" align="middle" alt="" />
+erebolucifer - 619
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="69" height="15" align="middle" alt="" />
+quiquecillo - 1002
+</td>
+</tr>
+<tr><td class="rankc">6</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="52" height="15" align="middle" alt="" />
+doncarreira - 759
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="12" height="15" align="middle" alt="" />
+m4nolillo88 - 188
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="39" height="15" align="middle" alt="" />
+elrincondepepe - 569
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="66" height="15" align="middle" alt="" />
+escuartizator - 966
+</td>
+</tr>
+<tr><td class="rankc">7</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="45" height="15" align="middle" alt="" />
+tutankabron2022 - 657
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="10" height="15" align="middle" alt="" />
+cibernoman - 159
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="37" height="15" align="middle" alt="" />
+jota_hache_ - 544
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="64" height="15" align="middle" alt="" />
+rad_101 - 933
+</td>
+</tr>
+<tr><td class="rankc">8</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="40" height="15" align="middle" alt="" />
+frangarcia1980 - 589
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="9" height="15" align="middle" alt="" />
+quiquecillo - 136
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="36" height="15" align="middle" alt="" />
+temerario87 - 525
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="63" height="15" align="middle" alt="" />
+m4nolillo88 - 926
+</td>
+</tr>
+<tr><td class="rankc">9</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="36" height="15" align="middle" alt="" />
+karis_z - 529
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="8" height="15" align="middle" alt="" />
+jota_hache_ - 118
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="31" height="15" align="middle" alt="" />
+zanac_77 - 455
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="56" height="15" align="middle" alt="" />
+tutankabron2022 - 823
+</td>
+</tr>
+<tr><td class="rankc">10</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="blue-h" border="0" width="28" height="15" align="middle" alt="" />
+er4manu - 420
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="green-h" border="0" width="6" height="15" align="middle" alt="" />
+lauradumbi - 97
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="yellow-h" border="0" width="26" height="15" align="middle" alt="" />
+lauradumbi - 386
+</td>
+<td class="hicell">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=
+" id="red-h" border="0" width="40" height="15" align="middle" alt="" />
+nimasnimenos10 - 590
+</td>
+</tr>
+</table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Acerca de nuestra gente</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table width="929">
+<tr><td class="hicell"><b>toxicosmos</b> necesitaba más horas de guardería cuando era pequeño/a, ¡el 20.0% de sus líneas contienen una pregunta!
+<br /><span class="small"><b>nierere</b> tampoco se entera de mucho, el 17.7% de sus líneas son preguntas.</span>
+</td></tr>
+<tr><td class="hicell">Me parece que <b>streamlabs</b> está algo exaltado/a. ¡Escribe con exclamaciones el 100.0% del tiempo!
+<br /><span class="small">A <b>juanito_maravilla</b> también le gusta afirmar con rotundidad lo que dice. ¡Escribe con exclamaciones el 50.9% del tiempo!</span>
+</td></tr>
+<tr><td class="hicell">A <b>atpeo</b> se le ha atascado el bloqueo de mayúsculas, el 18.6% del tiempo escribe CON ESTE ESTILO TAN PECULIAR.<br /><span class="small"><b>Como por ejemplo, esto:</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;atpeo&gt; 0_O</span>
+<br /><span class="small"><b>pacmancia</b> debe tener vicio con la tecla shift, el 13.2% del tiempo hace lo mismo.</span>
+</td></tr>
+<tr><td class="hicell">Nadie ha repartido tortas en este canal, todo el mundo parece amigable.</td></tr>
+<tr><td class="hicell"><b>cyberpla</b> parece que se hubiera fumado una compresa usada, el 38.1% de sus líneas contienen caritas sonrientes :)
+<br /><span class="small"><b>jota_hache_</b> habrá fumado otra cosa, está sonriendo el 26.1% del tiempo.</span>
+</td></tr>
+<tr><td class="hicell"><b>patati19</b> parece disgustado, el 2.5% de sus líneas contienen caras tristes :(
+<br /><span class="small"><b>toxicosmos</b> también está triste el 1.9% del tiempo.</span>
+</td></tr>
+<tr><td class="hicell"><b>raistlinmajere25</b> escribe las líneas más largas: 114.6 letras por línea...<br />
+<span class="small">La media de #meresbalatv es de 34.2 letras por línea.</span></td></tr>
+<tr><td class="hicell"><b>inochanx</b> es la persona más vaga escribiendo, con una media de 13.5 letras por línea...<br />
+<span class="small"><b>ssamendi</b> no se queda atrás, con una media de 15.7 letras.</span></td></tr>
+<tr><td class="hicell">¡<b>tremebundus666</b> ha dicho un total de 24952 palabras!
+<br /><span class="small">El mayor fan de tremebundus666 es <b>luis_bandido</b>, que ha escrito 17365 palabras.</span>
+</td></tr>
+<tr><td class="hicell"><b>temarcolossabados</b> Ha escrito una media de 65.50 palabras por línea...
+<br /><span class="small">La media del canal es de 6.14 palabras por línea.</span>
+</td></tr>
+</table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Las palabras más utilizadas</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0" width="929"><tr>
+<td>&nbsp;</td><td class="tdtop"><b>Palabra</b></td>
+<td class="tdtop"><b>Número de usos</b></td>
+<td class="tdtop"><b>Usada por última vez</b></td></tr>
+<tr><td class="hirankc">1</td>
+<td class="hicell">Buenas</td>
+<td class="hicell">1388</td>
+<td class="hicell">raul170705</td>
+</tr>
+<tr><td class="rankc">2</td>
+<td class="hicell">ahora</td>
+<td class="hicell">1221</td>
+<td class="hicell">tutankabron2022</td>
+</tr>
+<tr><td class="rankc">3</td>
+<td class="hicell">programación</td>
+<td class="hicell">973</td>
+<td class="hicell">juanito_maravilla</td>
+</tr>
+<tr><td class="rankc">4</td>
+<td class="hicell">tiene</td>
+<td class="hicell">929</td>
+<td class="hicell">vanditgamers</td>
+</tr>
+<tr><td class="rankc">5</td>
+<td class="hicell">programacion</td>
+<td class="hicell">875</td>
+<td class="hicell">m4nolillo88</td>
+</tr>
+<tr><td class="rankc">6</td>
+<td class="hicell">jajaja</td>
+<td class="hicell">804</td>
+<td class="hicell">vanditgamers</td>
+</tr>
+<tr><td class="rankc">7</td>
+<td class="hicell">cuando</td>
+<td class="hicell">692</td>
+<td class="hicell">jota_hache_</td>
+</tr>
+<tr><td class="rankc">8</td>
+<td class="hicell">bueno</td>
+<td class="hicell">663</td>
+<td class="hicell">karis_z</td>
+</tr>
+<tr><td class="rankc">9</td>
+<td class="hicell">mejor</td>
+<td class="hicell">638</td>
+<td class="hicell">jota_hache_</td>
+</tr>
+<tr><td class="rankc">10</td>
+<td class="hicell">todos</td>
+<td class="hicell">588</td>
+<td class="hicell">gessle77</td>
+</tr>
+</table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">URLs más frecuentemente mencionados</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table border="0" width="929"><tr>
+<td>&nbsp;</td><td class="tdtop"><b>URL</b></td>
+<td class="tdtop"><b>Número de usos</b></td>
+<td class="tdtop"><b>Usada por última vez</b></td></tr>
+<tr><td class="hirankc">1</td>
+<td class="hicell"><a href="https://twitter.com/Meridiana_Sur/status/1551221997484515328">https://twitter.com/Meridiana_Sur/status/1551221997484515328</a></td>
+<td class="hicell">2</td>
+<td class="hicell">reina_lenina</td>
+</tr>
+<tr><td class="rankc">2</td>
+<td class="hicell"><a href="https://open.spotify.com/user/distritf?si=4dba593f5d1f46fa">https://open.spotify.com/user/distritf?si=4dba593f5d1f46fa</a></td>
+<td class="hicell">2</td>
+<td class="hicell">luis_bandido</td>
+</tr>
+<tr><td class="rankc">3</td>
+<td class="hicell"><a href="https://www.youtube.com/watch?v=J5krqNtlDKU%26t=4s">https://www.youtube.com/watch?v=J5krqNtlDKU&amp;t=4s</a></td>
+<td class="hicell">2</td>
+<td class="hicell">luis_bandido</td>
+</tr>
+<tr><td class="rankc">4</td>
+<td class="hicell"><a href="https://imgur.com/a/3Bmybqe">https://imgur.com/a/3Bmybqe</a></td>
+<td class="hicell">2</td>
+<td class="hicell">peacetalker</td>
+</tr>
+<tr><td class="rankc">5</td>
+<td class="hicell"><a href="https://es.wikipedia.org/wiki/Depredador_%28alien%25C3%25ADgena">https://es.wikipedia.org/wiki/Depredador_(alien%C3%ADgena</a></td>
+<td class="hicell">1</td>
+<td class="hicell">cibernoman</td>
+</tr>
+</table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Otras cosas interesantes</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table width="929">
+<tr><td class="hicell">Es maja la gente de aquí, ¡nadie ha sido kickeado!</td></tr>
+<tr><td class="hicell">¡Aún no se han repartido arrobas en #meresbalatv!</td></tr>
+<tr><td class="hicell">¡Por el momento no se le ha quitado la arroba a nadie en #meresbalatv!</td></tr>
+<tr><td class="hicell"><b>elgamermanco</b> quiere mantenernos informados de lo que hace en todo momento. ¡Ha escrito 2 acciones!<br /><span class="small"><b>Aquí va un ejemplo:</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* elgamermanco ha desbloqueado el Logro de ser Baneado por 600 segundos. Ha perdido la virginidad.</span>
+</td></tr>
+<tr><td class="hicell"><b>tremebundus666</b> no tiene amigos, ha escrito más de 5 líneas seguidas en 75 ocasiones!
+<br /><span class="small">Otra persona solitaria es <b>quiquecillo</b>, que ha hecho lo mismo 25 veces.</span>
+</td></tr>
+<tr><td class="hicell"><b>harryfinkel</b> necesita que le laven la boca con jabón lagarto, un 0.4% de sus líneas contienen palabrotas y tacos.<br /><span class="small"><b>Por ejemplo, como esto:</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;harryfinkel&gt; @the_tarmac_ esa es en la venganza de los shit xD</span>
+<br /><span class="small"><b>50eurosonosolo</b> también es algo bestia, dice tacos el 0.3% del tiempo.</span>
+</td></tr>
+</table>
+   <br />
+   <table width="925" cellpadding="1" cellspacing="0" border="0">
+    <tr>
+     <td class="headlinebg">
+      <table width="100%" cellpadding="2" cellspacing="0" border="0">
+       <tr>
+        <td class="headtext">Últimos Topics</td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+   </table>
+
+<table width="929">
+<tr><td class="hicell">Aún no se ha utilizado el topic del canal</td></tr>
+</table>
+<div id="totallines">Número total de líneas: 63388</div>
+<div id="footer" class="small">
+	<div id="stats_gen"></div>
+	<div id="stats_text"></div>
+</div>
+
+<!-- NFiles = "0"; Format = "xchat"; Lang = "ES"; LangFile = "lang.txt"; Charset = "iso-8859-1"; LogCharset = ""; LogCharsetFallback = ""; LogPrefix = "#meresbalatv.log"; LogSuffix = ""; NickTracking = "1"; TimeOffset = "+0" -->
+</div>
+</body>
+</html>
+
+
   @keyframes tada{0%{transform:scale(1)}
   10%,20%{transform:scale(.9)rotate(-3deg)}
   30%,50%,70%,90%{transform:scale(1.1)rotate(3deg)}
